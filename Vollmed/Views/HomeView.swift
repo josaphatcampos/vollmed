@@ -8,6 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    let service = WebService()
+    @State private var specialists: [Specialist] = []
+    
+    func getSpecialists() async {
+        do{
+            if let specialistts = try await service.getAllSpecialists() {
+                self.specialists = specialistts
+            }
+        }catch {
+            print("Ocorreu um erro ao tentar carregar os especialistas: \(error)")
+        }
+    }
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -34,6 +48,11 @@ struct HomeView: View {
             .padding(.horizontal)
         }
         .padding(.top)
+        .onAppear{
+            Task {
+                await getSpecialists()
+            }
+        }
     }
 }
 
