@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		48539DEF2AB0F47C005BD7C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48539DEE2AB0F47C005BD7C9 /* ContentView.swift */; };
 		48539DF12AB0F47D005BD7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48539DF02AB0F47D005BD7C9 /* Assets.xcassets */; };
 		48539DF42AB0F47D005BD7C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48539DF32AB0F47D005BD7C9 /* Preview Assets.xcassets */; };
+		4DBD67BC2D9DD36700173FD7 /* ScheduleAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD67BB2D9DD36700173FD7 /* ScheduleAppointmentView.swift */; };
+		4DBD67C52D9DFF2300173FD7 /* ScheduleAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD67C42D9DFF1C00173FD7 /* ScheduleAppointment.swift */; };
+		4DBD67C72D9E09CF00173FD7 /* MyAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD67C62D9E09CF00173FD7 /* MyAppointmentView.swift */; };
+		4DBD67C92D9EEDB600173FD7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD67C82D9EEDB100173FD7 /* Appointment.swift */; };
+		4DBD67CB2D9EFB5600173FD7 /* CancelAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD67CA2D9EFB5600173FD7 /* CancelAppointmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +34,16 @@
 		48539DEE2AB0F47C005BD7C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48539DF02AB0F47D005BD7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48539DF32AB0F47D005BD7C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DBD67BB2D9DD36700173FD7 /* ScheduleAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointmentView.swift; sourceTree = "<group>"; };
+		4DBD67C42D9DFF1C00173FD7 /* ScheduleAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointment.swift; sourceTree = "<group>"; };
+		4DBD67C62D9E09CF00173FD7 /* MyAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppointmentView.swift; sourceTree = "<group>"; };
+		4DBD67C82D9EEDB100173FD7 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		4DBD67CA2D9EFB5600173FD7 /* CancelAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAppointmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4DBD67BD2D9DFC2100173FD7 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		48539DE62AB0F47C005BD7C9 /* Frameworks */ = {
@@ -47,6 +61,9 @@
 			children = (
 				484BEEF92AB0F5630033C07A /* Components */,
 				484BEF042AB0F7970033C07A /* HomeView.swift */,
+				4DBD67BB2D9DD36700173FD7 /* ScheduleAppointmentView.swift */,
+				4DBD67C62D9E09CF00173FD7 /* MyAppointmentView.swift */,
+				4DBD67CA2D9EFB5600173FD7 /* CancelAppointmentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -63,6 +80,8 @@
 		484BEEFA2AB0F5680033C07A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DBD67C82D9EEDB100173FD7 /* Appointment.swift */,
+				4DBD67C42D9DFF1C00173FD7 /* ScheduleAppointment.swift */,
 				484BEEFC2AB0F5750033C07A /* Specialist.swift */,
 			);
 			path = Models;
@@ -95,6 +114,7 @@
 		48539DEB2AB0F47C005BD7C9 /* Vollmed */ = {
 			isa = PBXGroup;
 			children = (
+				4DBD67BD2D9DFC2100173FD7 /* Extensions */,
 				484BEEFB2AB0F56C0033C07A /* Services */,
 				484BEEFA2AB0F5680033C07A /* Models */,
 				484BEEF82AB0F55F0033C07A /* Views */,
@@ -128,6 +148,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4DBD67BD2D9DFC2100173FD7 /* Extensions */,
 			);
 			name = Vollmed;
 			productName = Vollmed;
@@ -184,13 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBD67C92D9EEDB600173FD7 /* Appointment.swift in Sources */,
+				4DBD67C52D9DFF2300173FD7 /* ScheduleAppointment.swift in Sources */,
+				4DBD67C72D9E09CF00173FD7 /* MyAppointmentView.swift in Sources */,
 				48539DEF2AB0F47C005BD7C9 /* ContentView.swift in Sources */,
+				4DBD67CB2D9EFB5600173FD7 /* CancelAppointmentView.swift in Sources */,
 				484BEF052AB0F7970033C07A /* HomeView.swift in Sources */,
 				484BEEFD2AB0F5750033C07A /* Specialist.swift in Sources */,
 				484BEF012AB0F6090033C07A /* ButtonView.swift in Sources */,
 				484BEF032AB0F7080033C07A /* SpecialistCardView.swift in Sources */,
 				484BEEFF2AB0F59D0033C07A /* WebService.swift in Sources */,
 				48539DED2AB0F47C005BD7C9 /* VollmedApp.swift in Sources */,
+				4DBD67BC2D9DD36700173FD7 /* ScheduleAppointmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
